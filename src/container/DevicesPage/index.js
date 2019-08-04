@@ -39,6 +39,12 @@ class DevicesPage extends React.Component {
     this.props.onDeviceStateChange(e.currentTarget.id);
   }
 
+  getErrorMessages = () => {
+    if(this.props.deviceStatus === 'Failed') {
+      return this.props.deviceErrorMessage.map((error) => { return error });
+    } return null;
+  }
+
   getDevices = () => {
     if(this.props.deviceStatus === 'Done') {
       return this.props.devices.data && this.props.devices.data.map((device, i) => {
@@ -121,7 +127,7 @@ class DevicesPage extends React.Component {
 
     return(
       <div>
-        <ErrorMessage key="deviceErrorMsg" isError={this.props.deviceStatus === 'Failed'} message={this.props.deviceErrorMessage} />
+        <ErrorMessage key="deviceErrorMsg" isError={this.props.deviceStatus === 'Failed'} message={this.getErrorMessages()} />
         <div className={`${centerSpinner} deviceWrapper`}>
           {this.getDevices()}
         </div>
@@ -138,17 +144,18 @@ DevicesPage.propTypes = {
   getDevices: PropTypes.func.isRequired,
   onDeviceStateChange: PropTypes.func.isRequired,
   deviceStatus: PropTypes.string.isRequired,
-  deviceErrorMessage: PropTypes.string,
+  deviceErrorMessage: PropTypes.array,
 };
 
 DevicesPage.defaultProps = {
-  deviceErrorMessage: '',
+  deviceErrorMessage: [],
 };
 
 function mapStateToProps(state) {
   return {
     devices: state.DevicesPage.devices,
     deviceStatus: state.DevicesPage.deviceStatus,
+    deviceErrorMessage: state.DevicesPage.deviceErrorMessage,
   };
 }
 

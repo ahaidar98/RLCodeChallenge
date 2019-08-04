@@ -9,7 +9,7 @@ import {
 	const initialState = {
 		devices: [],
 		deviceStatus: '',
-		deviceErrorMessage: '',
+		deviceErrorMessage: [],
 	};
 
 	export default (state = initialState, action) => {
@@ -24,7 +24,7 @@ import {
 	      return { ...state, deviceStatus: 'Done' };
 
 	    case DEVICES_LOAD_FAILED:
-	      return { ...state, deviceStatus: 'Failed', deviceErrorMessage: action.errMesg };
+	      return { ...state, deviceStatus: 'Failed', deviceErrorMessage: [...action.errMesg] };
 
 			case CHANGE_DEVICE_STATE:
 				const devicesData = (state.devices && state.devices.data) || [];

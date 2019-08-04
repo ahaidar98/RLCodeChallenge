@@ -8,7 +8,7 @@ import {
 	const initialState = {
 		users:[],
 		userStatus: '',
-		usersErrorMessage: '',
+		usersErrorMessage: [],
 	};
 
 	export default (state = initialState, action) => {
@@ -23,7 +23,7 @@ import {
 	      return { ...state, userStatus: 'Done' };
 
 	    case USER_LOAD_FAILED:
-	      return { ...state, userStatus: 'Failed', usersErrorMessage: action.errMsg };
+	      return { ...state, userStatus: 'Failed', usersErrorMessage: [...action.errMesg] };
 
 	    default:
 	      return state;

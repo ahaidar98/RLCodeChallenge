@@ -29,9 +29,16 @@ class UsersPage extends React.Component {
     });
   }
 
+
   onTileBtnClick = (e) => {
     e.preventDefault();
     this.setState({ activeTile: e.currentTarget.id });
+  }
+
+  getErrorMessages = () => {
+    if(this.props.userStatus === 'Failed') {
+      return this.props.usersErrorMessage.map((error) => { return error });
+    } return null;
   }
 
   getTimeNDate = (str) => {
@@ -123,7 +130,7 @@ class UsersPage extends React.Component {
     const centerSpinner = this.props.userStatus !== 'Done' ? 'centerSpinner' : null;
     return(
       <div>
-        <ErrorMessage key="userErrorMsg" isError={this.props.userStatus === 'Failed'} message={this.props.usersErrorMessage} />
+        <ErrorMessage key="userErrorMsg" isError={this.props.userStatus === 'Failed'} message={this.getErrorMessages()} />
         <div className={`${centerSpinner} deviceWrapper`}>
           {this.userName()}
         </div>
@@ -138,11 +145,11 @@ class UsersPage extends React.Component {
 UsersPage.propTypes = {
   getUsers: PropTypes.func.isRequired,
   userStatus: PropTypes.string.isRequired,
-  usersErrorMessage: PropTypes.string.isRequired,
+  usersErrorMessage: PropTypes.array,
 };
 
 UsersPage.defaultProps = {
-  usersErrorMessage: '',
+  usersErrorMessage: [],
 };
 
 
@@ -150,6 +157,7 @@ function mapStateToProps(state) {
   return {
     users: state.UserPage.users,
     userStatus: state.UserPage.userStatus,
+    usersErrorMessage: state.UserPage.usersErrorMessage,
   };
 }
 
