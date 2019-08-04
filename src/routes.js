@@ -10,7 +10,6 @@ import DevicesPage from './container/DevicesPage/index';
 const Routes = history => {
   /* Make sure to keep pageNames names & path name the same. No need to capitalize. */
   const pageNames = ['devices', 'users'];
-  const keys = { users: 'userRoute', devices: 'deviceRoute' };
 
   return (
     <Router onUpdate={() => { window.scrollTo(0, 0); }} history={history}>
@@ -21,7 +20,7 @@ const Routes = history => {
             path="/users"
             render={() =>
               <div>
-                <PageButtonRoute activePage="users" pageNames={pageNames} key={keys.users} />
+                <PageButtonRoute activePage="users" pageNames={pageNames} key="userRoute" />
                 <UserPage />
               </div>
             }
@@ -31,7 +30,7 @@ const Routes = history => {
             path="/(devices|)"
             render={() =>
               <div>
-                <PageButtonRoute activePage="devices" pageNames={pageNames} key={keys.devices} />
+                <PageButtonRoute activePage="devices" pageNames={pageNames} key="deviceRoute" />
                 <DevicesPage />
               </div>
             }

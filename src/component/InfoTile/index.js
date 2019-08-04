@@ -28,7 +28,7 @@ InfoTile.propTypes = {
   id: PropTypes.string.isRequired,
   onTileBtnClick: PropTypes.func.isRequired,
   key: PropTypes.string,
-  activeTile: PropTypes.string.isRequired,
+  activeTile: PropTypes.string,
   pillStatus: PropTypes.string,
   pillColor: PropTypes.string,
   deviceLock: PropTypes.object,
@@ -40,7 +40,7 @@ InfoTile.defaultProps = {
   model: '',
   pillStatus: '',
   pillColor: '',
-  deviceLock: '',
+  deviceLock: null,
   deviceLockColor: '',
 };
 
