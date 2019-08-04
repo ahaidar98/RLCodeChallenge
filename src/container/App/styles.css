@@ -1,0 +1,12 @@
+html, body {
+  background-color: rgb(238, 238, 238);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

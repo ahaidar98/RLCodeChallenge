@@ -1,0 +1,81 @@
+/* Sorted by alphabetical class Names */
+
+.activeUnlockBtn {
+  border-color: green !important;
+  color: green;
+}
+
+.infoText {
+  margin: 8px 0;
+  text-transform: capitalize;
+}
+
+.deviceInfo {
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.deviceWrapper {
+  display: inline-flex;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow-x:scroll;
+  overflow-y:hidden;
+}
+
+.deviceWrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.deviceWrapper::-webkit-scrollbar * {
+  background: transparent;
+}
+
+.deviceWrapper::-webkit-scrollbar-thumb {
+  background: rgb(223,223,224) !important;
+  border-radius: 5px;
+}
+
+.infoContainer {
+  margin: 20px 0 10px 10px;
+  width: calc(100% - 10px);
+  text-align: center;
+}
+
+.centerSpinner {
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.green {
+  color: #00b300;
+}
+
+.line {
+  border-bottom: 1px solid rgb(202, 202, 206);
+  margin: 10px;
+}
+
+.lockPosition {
+  margin-bottom: 4px;
+}
+
+.lockState {
+  display: inline;
+  margin-left: 5px;
+  text-transform: capitalize;
+}
+
+.lockStateWrapper {
+  margin: 10px 0;
+}
+
+.red {
+  color: #ff1a1a;
+}
+
+.togglePosition {
+  vertical-align: middle;
+  font-size: 40px;
+}

@@ -1,0 +1,39 @@
+/* Sorted by alphabetical class Names */
+
+.activeLi {
+  background-color: white !important;
+}
+
+.fullWidth {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pgLi {
+  background-color: transparent;
+  flex: 1;
+  list-style: none;
+  padding: 8px 30px;
+  margin: 3px;
+  border-radius: 5px;
+  width: auto;
+  white-space: nowrap;
+}
+
+.pgLink {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 0.83em;
+  text-transform: capitalize;
+}
+
+.pgUl {
+  display: inline-flex;
+  flex-direction: row;
+  border-radius: 5px;
+  text-align: center;
+  background-color: rgb(223, 223,224);
+  padding: 0;
+}

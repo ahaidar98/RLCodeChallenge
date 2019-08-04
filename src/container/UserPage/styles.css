@@ -1,0 +1,43 @@
+/* Sorted by alphabetical class Names */
+
+.noBold {
+    font-weight: normal !important;
+}
+
+.headerPill {
+  margin: 20px 0 10px 0;
+}
+
+.headerinfo {
+  display: inline-block;
+  margin-right: 5px !important;
+}
+
+.greenPill {
+  background-color: rgb(198,245,170);
+  color: rgb(64,110,40);
+}
+
+.pill {
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.infoWrapper {
+  border-top: 1px solid rgb(202, 202, 206);
+  margin: 25px 10px 0px 10px;
+  display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.redPill {
+  background-color: #ff1a1a;
+  color: #660000;
+}
+
+.yellowPill {
+  background-color: rgb(224,245,171);
+  color: rgb(127,102,30);
+}

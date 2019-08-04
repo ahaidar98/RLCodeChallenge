@@ -1,0 +1,36 @@
+/* Sorted by alphabetical class Names */
+
+.active {
+  background-color: white !important;
+}
+
+.tileLock {
+  margin: 0 5px 2px 0;
+}
+
+.tileText {
+  margin: 5px 0;
+  border-radius: 5px;
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+.tileWrapper {
+  flex: 1;
+  text-align: center;
+  background-color: rgb(223, 223,224);
+  padding: 8px 0;
+  margin: 10px;
+  min-width: 10em;
+  border: none;
+  outline: none !important;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  padding: 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 5px;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow
+}
