@@ -1,8 +1,7 @@
 ## Implemented in React Boilerplate from https://github.com/ahaidar98/react-boilerplate
 
 * React Redux
-* Sagas
-* Reducers
+* Redux Sagas
 * Routes (History)
 * PropTypes
 
